@@ -1,0 +1,53 @@
+/**
+  * =====================
+  *  SLIDE
+  * =====================
+*/
+
+.slide-group__inner {
+  @apply h-full;
+  @apply w-max-content;
+}
+
+.slide__inner
+{
+  @apply h-full;
+  @apply w-full;
+}
+
+.slide-content {
+  @apply max-h-[calc(100vh-48px)];
+  @apply w-full;
+  @apply overflow-y-hidden;
+  @apply flex;
+  @apply flex-1;
+  @apply items-center;
+  @apply justify-between;
+}
+
+.slide {
+  @apply w-[100vw];
+  @apply inline-flex;
+}
+
+.slide__header {
+  @apply w-full;
+  @apply flex;
+  @apply items-center;
+  @apply justify-between;
+}
+
+.slide__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slide__header__logo {
+  @apply text-white;
+  @apply bg-primary;
+  @apply rounded-full;
+  @apply w-12;
+  @apply h-12;
+}

@@ -1,0 +1,20 @@
+
+/**
+  * =====================
+  *  MEDIA
+  * =====================
+*/
+
+.media-stack, .media-card, .media-card__img {
+  @apply w-full;
+}
+
+.media-stack__inner
+{
+  @apply h-full;
+  @apply w-full;
+}
+
+.media-card {
+  @apply overflow-hidden;
+}

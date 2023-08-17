@@ -11,6 +11,9 @@ module.exports = {
         quinary: '#807182',
         offWhite: '#e2e8f0',
       },
+      width: {
+        'max-content': 'max-content',
+      },
     },
   },
   plugins: [],

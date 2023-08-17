@@ -5,6 +5,7 @@ import debounce from 'utils/debounce';
 interface SlideGroupProps {
   id: string;
   className?: string;
+  innerClassName?: string;
   scrollDir?: string;
   children?: React.ReactNode;
 }
@@ -12,13 +13,14 @@ interface SlideGroupProps {
 const SlideGroup = ({
   id,
   className,
+  innerClassName,
   scrollDir = ScrollDir.VERTICAL,
   children,
 }: SlideGroupProps) => {
   useEffect(() => {
     // if the scroll direction is horizontal, then we need to set a watcher for the mousewheel event that scrolls the slide group horizontally and does not bubble up to the window
     if (scrollDir === ScrollDir.HORIZONTAL) {
-      const slideGroup = document.getElementById(`${id}-inner`);
+      const slideGroup = document.getElementById(`${id}`);
       if (slideGroup) {
         const handleWheel = (e: WheelEvent) => {
           // If the element can still be scrolled further in the direction of the event and the element is vertically centered in the viewport, then prevent the default behavior of the event and scroll the element in the direction of the event
@@ -58,13 +60,13 @@ const SlideGroup = ({
   }, [scrollDir, id]);
 
   return (
-    <div id={id} className={`slide-group ${className}`}>
-      <div
-        id={`${id}-inner`}
-        className={`slide-group__inner scroll-smooth transition-transform duration-200 ${
-          scrollDir === ScrollDir.HORIZONTAL ? 'whitespace-nowrap overflow-x-hidden' : ''
-        }`}
-      >
+    <div
+      id={id}
+      className={`slide-group scroll-smooth transition-transform duration-200 ${
+        scrollDir === ScrollDir.HORIZONTAL ? 'whitespace-nowrap overflow-x-hidden' : ''
+      } ${className}`}
+    >
+      <div id={`${id}-inner`} className={`slide-group__inner ${innerClassName}`}>
         {children}
       </div>
     </div>
