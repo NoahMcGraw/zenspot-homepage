@@ -9,8 +9,7 @@
   @apply w-max-content;
 }
 
-.slide__inner
-{
+.slide__inner {
   @apply h-full;
   @apply w-full;
 }
