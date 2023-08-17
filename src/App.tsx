@@ -17,7 +17,7 @@ function App() {
         <SlideGroup
           id="intro"
           className="h-[100vh]"
-          innerClassName="bg-gradient-to-r from-transparent from-55% to-70% to-tertiary"
+          innerClassName="w-max-content bg-gradient-to-r from-transparent from-55% to-70% to-tertiary"
           scrollDir={ScrollDir.HORIZONTAL}
         >
           <Slide id="intro-1">
@@ -85,8 +85,13 @@ function App() {
             </SlideContent>
           </Slide>
         </SlideGroup>
-        <SlideGroup id="test" className="h-[100vh]" scrollDir={ScrollDir.HORIZONTAL}>
-          <Slide id="test-1" className="w-full">
+        <SlideGroup
+          id="test"
+          className="h-[100vh]"
+          innerClassName="w-max-content bg-gradient-to-r from-transparent from-55% to-70% to-tertiary"
+          scrollDir={ScrollDir.HORIZONTAL}
+        >
+          <Slide id="test-1">
             <SlideLogoHeader id="test-1-slide-header" />
             <SlideContent id="test-1-slide-content">
               <div className="w-1/3 min-w-fit">
@@ -107,7 +112,7 @@ function App() {
               </div>
             </SlideContent>
           </Slide>
-          <Slide id="test-2" className="w-full">
+          <Slide id="test-2">
             <SlideLogoHeader id="test-2-slide-header" />
             <SlideContent id="test-2-slide-content">
               <div className="w-1/3 min-w-fit">

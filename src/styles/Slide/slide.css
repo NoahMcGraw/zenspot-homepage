@@ -6,12 +6,6 @@
 
 .slide-group__inner {
   @apply h-full;
-  @apply w-max-content;
-}
-
-.slide__inner {
-  @apply h-full;
-  @apply w-full;
 }
 
 .slide-content {
@@ -26,6 +20,7 @@
 
 .slide {
   @apply w-[100vw];
+  @apply h-full;
   @apply inline-flex;
 }
 
@@ -37,6 +32,8 @@
 }
 
 .slide__inner {
+  @apply h-full;
+  @apply w-full;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
